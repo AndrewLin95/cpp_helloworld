@@ -6,16 +6,17 @@ void Log(int number)
 	std::cout << number << std::endl;
 }
 
+void Increment(int* value)
+{
+	(*value)++;
+}
+
 int main()
 {
 	int var = 8;
-	// set ptr to reference the memory address of var
-	int* ptr = &var;
-	// update the memory address to new value
-	*ptr = 10;
+	Increment(&var);
 
 	Log(var);
-	std::cout << ptr << std::endl;
 
 	std::cin.get();
 }
